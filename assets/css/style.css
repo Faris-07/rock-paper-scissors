@@ -1,0 +1,35 @@
+body {
+    background-color: #2E5A88;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.choice {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 5rem;
+    flex-basis: 10%;
+}
+
+.choice:hover {
+    color: #FFA500;
+}
