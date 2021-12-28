@@ -28,6 +28,36 @@ selectionButtons.forEach(selectionButton => {
 })
 
 /* 
+   The makeSelection function runs the randomSelection function for the computers selection and then if the player wins it increments the score span by +1
+   else if the computer wins then increment the computers score span by +1 else if its a draw then dont increment any score spans.
+   Also if the player wins then output "You won this round!", if the computer wins then the output is "You lost this round" but if nobody wins then output
+   "It's a draw!". 
+*/
+function makeSelection(selection) {
+  const computerSelection = randomSelection()
+  const playerWinner = isWinner(selection, computerSelection)
+  const computerWinner = isWinner(computerSelection, selection)
+
+  if (playerWinner) {
+    incrementScore(playerScoreSpan);
+  } else if (computerWinner){
+    incrementScore(computerScoreSpan);
+  } else {
+
+  }
+  
+  let message = document.getElementById('message');
+  if (playerWinner){
+    message.innerHTML = "You won this round!"
+} else if (computerWinner){
+    message.innerHTML = "You lost this round";
+} else {
+    message.innerHTML = "It's a draw!";
+}
+}
+
+
+/* 
    The incrementScore function increases the scoreSpan innerText by 1.
 */
 function incrementScore(scoreSpan) {
