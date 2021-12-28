@@ -35,6 +35,13 @@ function incrementScore(scoreSpan) {
 }
 
 /* 
+   The isWinner function checks if the selection.beats object is equal to the opponents selection.
+*/
+function isWinner(selection, opponentSelection) {
+  return selection.beats === opponentSelection.name
+}
+
+/* 
    The random selection function selects a random index between 0 - 2 for the computers selection.
 */
 function randomSelection() {
