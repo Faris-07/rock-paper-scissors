@@ -4,14 +4,17 @@ const playerScoreSpan = document.querySelector('[data-player-score]')
 const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   {
     name: 'rock',
+    icon: '<i class="fas fa-hand-rock"></i>',
     beats: 'scissors'
   },
   {
     name: 'paper',
+    icon: '<i class="fas fa-hand-paper"></i>',
     beats: 'rock'
   },
   {
     name: 'scissors',
+    icon: '<i class="fas fa-hand-scissors"></i>',
     beats: 'paper'
   }
 ]
@@ -49,14 +52,14 @@ function makeSelection(selection) {
   let showChoice = document.getElementById('show-choice');
   let message = document.getElementById('message');
   if (playerWinner){
-    message.innerHTML = "You won this round!"
-    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
+    message.innerHTML = "<p>You won this round!</p>"
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
 } else if (computerWinner){
-    message.innerHTML = "You lost this round";
-    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
+    message.innerHTML = "<p>You lost this round</p>";
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
 } else {
-    message.innerHTML = "It's a draw!";
-    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
+    message.innerHTML = "<p>It's a draw!</p>";
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
 }
 }
 
