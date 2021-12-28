@@ -68,7 +68,7 @@ p {
 #rules-box {
     display: flex;
     justify-content: center;
-    margin: 0 20% 0 20%;
+    margin: 0 30% 0 30%;
     background-color: #C42847;
     color: #fff;
 }
@@ -76,12 +76,17 @@ p {
 #rules-heading {
     display: flex;
     justify-content: center;
-    margin: 5% 20% 0 20%;
+    margin: 5% 30% 0 30%;
     background-color: #C42847;
     color: #fff;
 }
 
 #message p {
+    font-size: 1.7rem;
+}
+
+.choices p {
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.7rem;
 }
 
