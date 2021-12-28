@@ -17,6 +17,13 @@ const SELECTIONS = [  // Is an array of all the selecetions the user can choose
 ]
 
 /* 
+   The incrementScore function increases the scoreSpan innerText by 1.
+*/
+function incrementScore(scoreSpan) {
+  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+}
+
+/* 
    The random selection function selects a random index between 0 - 2 for the computers selection.
 */
 function randomSelection() {
