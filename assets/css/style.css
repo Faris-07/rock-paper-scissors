@@ -65,6 +65,26 @@ p {
     color: #FFA500;
   }
 
+#rules-box {
+    display: flex;
+    justify-content: center;
+    margin: 0 20% 0 20%;
+    background-color: #C42847;
+    color: #fff;
+}
+
+#rules-heading {
+    display: flex;
+    justify-content: center;
+    margin: 5% 20% 0 20%;
+    background-color: #C42847;
+    color: #fff;
+}
+
+#message p {
+    font-size: 1.7rem;
+}
+
 #red-text {
     color: red;
   }

@@ -53,13 +53,13 @@ function makeSelection(selection) {
   let message = document.getElementById('message');
   if (playerWinner){
     message.innerHTML = "<p>You won this round!</p>"
-    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon} ${selection.name}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon} ${computerSelection.name}</strong></p>`
 } else if (computerWinner){
-    message.innerHTML = "<p>You lost this round</p>";
-    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
+    message.innerHTML = "<p>You lost this round, Keep going!</p>";
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon} ${selection.name}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon} ${computerSelection.name}</strong></p>`
 } else {
     message.innerHTML = "<p>It's a draw!</p>";
-    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon}</strong></p>`
+    showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon} ${selection.name}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon} ${computerSelection.name}</strong></p>`
 }
 }
 
