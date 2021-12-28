@@ -32,16 +32,28 @@ h1 {
 
 .choice:hover {
     color: #FFA500;
+    transform: scale(1.1);
 }
 
 .score-board {
     margin-top: 5%;
-    display: flex;
+    font-size: 2rem;
+    display: grid;
     justify-content: center;
+    justify-items: center;
+  }
+
+.result-score {
+    color: #00FF00;
     font-size: 2rem;
   }
 
-  .result-score {
-    color: #00FF00;
-    font-size: 2rem;
+#message {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+#red-text {
+    color: red;
   }

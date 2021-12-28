@@ -7,7 +7,7 @@
     <!--Fontawesome and Google font links-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
      crossorigin="anonymous">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
@@ -21,14 +21,18 @@
     
     <div class="score-board">
         <div>
-            Player
-            <span class="result-score" data-your-score>0</span>
+            Player:
+            <span class="result-score" data-player-score>0</span>
           </div>
-          <div data-final-column>
-            Computer
-            <span class="result-score" data-computer-score>0</span>
+          <div>
+            Computer:
+            <span id="red-text" class="result-score" data-computer-score>0</span>
           </div>
     </div>
+
+    <div id="show-choice"></div>
+
+    <div id="message"></div>
 
     <div class="choices">
         <button class="choice" data-selection="rock"><i class="fas fa-hand-rock"></i></button>
