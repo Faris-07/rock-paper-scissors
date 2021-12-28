@@ -50,13 +50,13 @@ function makeSelection(selection) {
   let message = document.getElementById('message');
   if (playerWinner){
     message.innerHTML = "You won this round!"
-    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
+    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
 } else if (computerWinner){
     message.innerHTML = "You lost this round";
-    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
+    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
 } else {
     message.innerHTML = "It's a draw!";
-    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
+    showChoice.innerHTML = `<p>You chose <strong class="player">${selection.name}</strong> and the computer chose <strong class="computer">${computerSelection.name}</strong></p>`
 }
 }
 

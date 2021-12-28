@@ -63,3 +63,11 @@ h1 {
 #red-text {
     color: red;
   }
+
+  .player {
+      color: #00FF00;
+  }
+
+  .computer {
+      color: red;
+  }
