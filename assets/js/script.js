@@ -16,6 +16,17 @@ const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   }
 ]
 
+/* Add Event listener to the selection buttons
+   Then loops through all the different sections and finds the one that has the same values as the selectionName variable.
+*/
+selectionButtons.forEach(selectionButton => {
+  selectionButton.addEventListener('click', e => {
+    const selectionName = selectionButton.dataset.selection
+    const selection = SELECTIONS.find(selection => selection.name === selectionName)
+    makeSelection(selection)
+  })
+})
+
 /* 
    The incrementScore function increases the scoreSpan innerText by 1.
 */
