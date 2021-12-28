@@ -48,10 +48,16 @@ h1 {
     font-size: 2rem;
   }
 
+#show-choice {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
 #message {
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
   }
 
 #red-text {

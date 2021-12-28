@@ -46,16 +46,19 @@ function makeSelection(selection) {
 
   }
   
+  let showChoice = document.getElementById('show-choice');
   let message = document.getElementById('message');
   if (playerWinner){
     message.innerHTML = "You won this round!"
+    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
 } else if (computerWinner){
     message.innerHTML = "You lost this round";
+    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
 } else {
     message.innerHTML = "It's a draw!";
+    showChoice.innerHTML = `You chose ${selection} and the computer chose ${computerSelection}`
 }
 }
-
 
 /* 
    The incrementScore function increases the scoreSpan innerText by 1.
@@ -63,7 +66,6 @@ function makeSelection(selection) {
 function incrementScore(scoreSpan) {
   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
-
 /* 
    The isWinner function checks if the selection.beats object is equal to the opponents selection.
 */
