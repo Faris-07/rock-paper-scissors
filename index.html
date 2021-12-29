@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    
-
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock|Paper|Scissors</title>
 </head>
@@ -22,7 +20,7 @@
 
     <div class="player-lives">
         Lives :
-        <span class="lives" data-player-lives>5</span>
+        <span id="lives" data-player-lives>5</span>
     </div>
     
     <div class="score-board">
@@ -50,11 +48,11 @@
 
     <div id="my-modal" class="modal">
         <div class="modal-content">
-        <div class="modal-header"id="rules-heading">
+        <div class="modal-header">
             <span class="close">&times;</span>
             <h2>Rules:</h2>
         </div>
-        <div id="rules-box" class="modal-body">
+        <div class="modal-body">
             <p>Rock Smashes Scissors </p>
             <p> | Scissors Cuts Paper </p>
             <p> | Paper Covers Rock</p>
@@ -62,9 +60,19 @@
         </div>
     </div>
 
-    <div class="modal">
-        <div id="play-again" class="modal-content"></div>
-      </div>
+    <div id="play-again-modal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>Play Again:</h2>
+        </div>
+        <div class="modal-body">
+            <p>Looks like you ran out of lives, Well lets go again!</p>
+            <button id="play-again-btn" class="button">Play Again</button>
+        </div>
+        </div>
+    </div>
+    
 
     <script src="assets/js/script.js"></script>
 </body>

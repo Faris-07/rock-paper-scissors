@@ -47,7 +47,7 @@ function makeSelection(selection) {
   } else if (computerWinner){
     incrementScore(computerScoreSpan);
     playerLives(playerLivesSpan);
-  } else {
+  } else { 
 
   }
   
@@ -91,7 +91,26 @@ function randomSelection() {
 function playerLives(livesSpan) {
   livesSpan.innerText = parseInt(livesSpan.innerText) - 1
 }
-  
+
+// Restart game
+function restartGame() {
+  playerLivesSpan.innerHTML = 5;
+  playerScoreSpan.innerHTML = 0;
+  computerScoreSpan.innerHTML = 0;
+}
+
+const playAgainModel = document.querySelector('#play-again-modal');
+const playAgainBtn = document.querySelector('#play-again-btn');
+
+playAgainBtn.addEventListener('click', restartGame);
+
+function gameOver(playAgainModel) {
+	if (playerLivesSpan.innerHTML === 0) {
+		 playAgainModel.style.display = 'block';
+  } else {
+    playAgainModel.style.display = 'none';
+  }
+}
 
 // Get DOM Elements
 const modal = document.querySelector('#my-modal');
