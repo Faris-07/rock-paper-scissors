@@ -15,6 +15,15 @@ p {
     font-size: 1.5rem;
 }
 
+.player-lives {
+    margin-top: 3%;
+    font-size: 1.7rem;
+    color: #FFA500;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
 .score-board {
     display: flex;
     justify-content: center;
