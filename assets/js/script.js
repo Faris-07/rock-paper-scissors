@@ -1,6 +1,7 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const playerScoreSpan = document.querySelector('[data-player-score]')
+const playerLivesSpan = document.querySelector('[data-player-lives]')
 const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   {
     name: 'rock',
@@ -18,33 +19,6 @@ const SELECTIONS = [  // Is an array of all the selecetions the user can choose
     beats: 'paper'
   }
 ]
-
-// Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
-const closeBtn = document.querySelector('.close');
-
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
-
-// Open
-function openModal() {
-  modal.style.display = 'block';
-}
-
-// Close
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Close If Outside Click
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
 
 /* Add Event listener to the selection buttons
    Then loops through all the different sections and finds the one that has the same values as the selectionName variable.
@@ -72,6 +46,7 @@ function makeSelection(selection) {
     incrementScore(playerScoreSpan);
   } else if (computerWinner){
     incrementScore(computerScoreSpan);
+    playerLives(playerLivesSpan);
   } else {
 
   }
@@ -109,4 +84,38 @@ function isWinner(selection, opponentSelection) {
 function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
   return SELECTIONS[randomIndex]
+}
+/* 
+   The playerLives function decreases the livesSpan innerText by 1.
+*/
+function playerLives(livesSpan) {
+  livesSpan.innerText = parseInt(livesSpan.innerText) - 1
+}
+  
+
+// Get DOM Elements
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
 }
