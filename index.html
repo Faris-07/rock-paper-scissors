@@ -20,7 +20,7 @@
 
     <div class="player-lives">
         Lives :
-        <span id="lives" data-player-lives>5</span>
+        <span id="lives" data-player-lives = 5>5</span>
     </div>
     
     <div class="score-board">
@@ -44,8 +44,24 @@
         <button class="choice" data-selection="scissors" aria-labelledby="Scissors"><i class="fas fa-hand-scissors"><p>Scissors</p></i></button>
     </div>
 
-    <button id="modal-btn" class="button">Rules</button>
-
+    <div class="buttons">
+        <button id="rules-modal-btn" class="button">Rules</button>
+        <button id="restart-btn" class="button">Restart</button>
+    </div>
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Rules:</h2>
+        </div>
+        <div class="modal-body">
+            <p>Rock Smashes Scissors </p>
+            <p>Scissors Cuts Paper </p>
+            <p>Paper Covers Rock</p>
+        </div>
+        </div>
+    </div>
+    
     <div id="my-modal" class="modal">
         <div class="modal-content">
         <div class="modal-header">
@@ -54,8 +70,8 @@
         </div>
         <div class="modal-body">
             <p>Rock Smashes Scissors </p>
-            <p> | Scissors Cuts Paper </p>
-            <p> | Paper Covers Rock</p>
+            <p>Scissors Cuts Paper </p>
+            <p>Paper Covers Rock</p>
         </div>
         </div>
     </div>

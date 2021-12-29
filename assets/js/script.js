@@ -48,7 +48,7 @@ function makeSelection(selection) {
     incrementScore(computerScoreSpan);
     playerLives(playerLivesSpan);
   } else { 
-
+    
   }
   
   let showChoice = document.getElementById('show-choice');
@@ -92,29 +92,45 @@ function playerLives(livesSpan) {
   livesSpan.innerText = parseInt(livesSpan.innerText) - 1
 }
 
+const restartBtn = document.querySelector('#restart-btn');
+restartBtn.addEventListener('click', restartGame);
+
 // Restart game
 function restartGame() {
   playerLivesSpan.innerHTML = 5;
   playerScoreSpan.innerHTML = 0;
   computerScoreSpan.innerHTML = 0;
+  location.reload();
 }
 
-const playAgainModel = document.querySelector('#play-again-modal');
-const playAgainBtn = document.querySelector('#play-again-btn');
+const playAgainModal = document.querySelector('#play-again-modal')[0];
 
-playAgainBtn.addEventListener('click', restartGame);
+playAgainBtn.addEventListener('click', restartGame );
 
-function gameOver(playAgainModel) {
-	if (playerLivesSpan.innerHTML === 0) {
-		 playAgainModel.style.display = 'block';
+function gameOver(playAgainModal) {
+	if (playerScoreSpan.innerHTML === 5) {
+		 playAgainModal.style.display = 'block';
   } else {
-    playAgainModel.style.display = 'none';
+    playAgainModal.style.display = 'none';
   }
 }
 
+/*function gameOver(playAgainModal, modal-header, modal-body) {
+  if (playerLivesSpan.innerHTML === 0 && playerScoreSpan < 5) {
+    playAgainModal.style.display = 'block';
+    modal-header.textContent = 'You Lost';
+    modal-body.textContent = `Looks like you ran out of lives, Well lets go again!`;
+  } else if (playerLivesSpan.innerHTML > 0 && playerScoreSpan > computerScoreSpan && playerScoreSpan === 5) {
+    playAgainModal.style.display = 'block';
+    modal-header.textContent = 'You won!';
+    modal-body.textContent = `Well done you beat the computer, lets go for another round!`;
+}
+*/
+/* All Buttons for the website are here */
+
 // Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
+const modal = document.querySelector('#rules-modal');
+const modalBtn = document.querySelector('#rules-modal-btn');
 const closeBtn = document.querySelector('.close');
 
 // Events

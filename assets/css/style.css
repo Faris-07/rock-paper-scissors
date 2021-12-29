@@ -74,13 +74,18 @@ p {
     color: #FFA500;
 }
 
-.button {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button {
+    flex-basis: 10%;
     background: #C42847;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1em 2em;
+    margin: 3% 5% 0 5%;
     color: #fff;
     border: 0;
     border-radius: 5px;
@@ -126,6 +131,8 @@ p {
 .modal-body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #2C3D55;
     color: #fff;
   }
