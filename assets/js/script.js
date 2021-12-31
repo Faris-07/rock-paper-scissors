@@ -20,6 +20,33 @@ const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   }
 ]
 
+// Get DOM Elements
+const modal = document.querySelector('#rules-modal');
+const modalBtn = document.querySelector('#rules-modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
 /* Add Event listener to the selection buttons
    Then loops through all the different sections and finds the one that has the same values as the selectionName variable.
 */
@@ -44,13 +71,14 @@ function makeSelection(selection) {
 
   if (playerWinner) {
     incrementScore(playerScoreSpan);
+    gameOver(playerScoreSpan)
   } else if (computerWinner){
     incrementScore(computerScoreSpan);
     playerLives(playerLivesSpan);
   } else { 
     
   }
-  
+
   let showChoice = document.getElementById('show-choice');
   let message = document.getElementById('message');
   if (playerWinner){
@@ -64,6 +92,14 @@ function makeSelection(selection) {
     showChoice.innerHTML = `<p>You chose <strong class="player-choice">${selection.icon} ${selection.name}</strong> and the computer chose <strong class="computer-choice">${computerSelection.icon} ${computerSelection.name}</strong></p>`
 }
 }
+
+/*function Play(){
+  if (playerLivesSpan.innerHTML === 0) {
+		 playAgainModal.style.display = 'block';
+  } else {
+    playAgainModal.style.display = 'none';
+  }
+}*/
 
 /* 
    The incrementScore function increases the scoreSpan innerText by 1.
@@ -103,54 +139,25 @@ function restartGame() {
   location.reload();
 }
 
-const playAgainModal = document.querySelector('#play-again-modal')[0];
+playerScoreSpan.addEventListener('event', gameOver);
+computerScoreSpan.addEventListener('listener', gameOver);
 
-playAgainBtn.addEventListener('click', restartGame );
+const playAgainModal = document.getElementById('#play-again-modal');
+const modalHeader = document.getElementsByClassName('#modal-header');
+const modalParagraph = document.getElementsByClassName('#modal-body');
+const playAgainBtn = document.getElementById('#play-again-btn');
+playAgainBtn.addEventListener('click', restartGame);
 
-function gameOver(playAgainModal) {
-	if (playerScoreSpan.innerHTML === 5) {
-		 playAgainModal.style.display = 'block';
-  } else {
-    playAgainModal.style.display = 'none';
-  }
-}
+document.getElementsByTagName('span').addEventListener('click', gameOver);
 
-/*function gameOver(playAgainModal, modal-header, modal-body) {
-  if (playerLivesSpan.innerHTML === 0 && playerScoreSpan < 5) {
+function gameOver() {
+  if (playerScoreSpan.innerHTML === 5) {
     playAgainModal.style.display = 'block';
-    modal-header.textContent = 'You Lost';
-    modal-body.textContent = `Looks like you ran out of lives, Well lets go again!`;
-  } else if (playerLivesSpan.innerHTML > 0 && playerScoreSpan > computerScoreSpan && playerScoreSpan === 5) {
+    modalHeader.innerHTML = 'You won!';
+    modalParagraph.innerHTML = `Well done you beat the computer, lets go for another round!`;
+  } else if (computerScoreSpan.innerHTML === 5) {
     playAgainModal.style.display = 'block';
-    modal-header.textContent = 'You won!';
-    modal-body.textContent = `Well done you beat the computer, lets go for another round!`;
+    modalHeader.innerHTML = 'You lost!';
+    modalParagraph.innerHTML = `Looks like the computer beat you, Well lets go again!`;
 }
-*/
-/* All Buttons for the website are here */
-
-// Get DOM Elements
-const modal = document.querySelector('#rules-modal');
-const modalBtn = document.querySelector('#rules-modal-btn');
-const closeBtn = document.querySelector('.close');
-
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
-
-// Open
-function openModal() {
-  modal.style.display = 'block';
-}
-
-// Close
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Close If Outside Click
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
 }

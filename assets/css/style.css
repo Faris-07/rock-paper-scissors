@@ -121,7 +121,8 @@ p {
   }
   
 .modal-header {
-    display: grid;
+    display: flex;
+    flex-basis: 10%;
     justify-content: center;
     padding: 2%;
     background-color: #C42847;
@@ -148,6 +149,10 @@ p {
     text-decoration: none;
     cursor: pointer;
   }
+
+#play-again-btn {
+  margin-bottom: 1em;
+}
 
 #message p {
     font-size: 1.7rem;
