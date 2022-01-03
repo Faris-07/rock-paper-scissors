@@ -1,4 +1,5 @@
 body {
+    /*background-image: url("../images/RPS-wallpaper.png");*/
     background-color: #2C3D55;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
@@ -14,6 +15,14 @@ h1 {
 p {
     font-size: 1.5rem;
 }
+
+/*.wrapper {
+  background-color: #2C3D55;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  height: 80%;
+  width: 100%;
+}*/
 
 .player-lives {
     margin-top: 3%;
@@ -91,7 +100,14 @@ p {
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .button:hover {
     background: #FFA500;
   }
@@ -176,3 +192,4 @@ p {
       color: red;
       font-size: 2rem;
   }
+  

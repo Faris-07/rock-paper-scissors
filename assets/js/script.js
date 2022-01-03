@@ -146,18 +146,18 @@ const playAgainModal = document.getElementById('#play-again-modal');
 const modalHeader = document.getElementsByClassName('#modal-header');
 const modalParagraph = document.getElementsByClassName('#modal-body');
 const playAgainBtn = document.getElementById('#play-again-btn');
-playAgainBtn.addEventListener('click', restartGame);
+//playAgainBtn.addEventListener('click', restartGame);
 
-document.getElementsByTagName('span').addEventListener('click', gameOver);
+//document.getElementsByTagName('span').addEventListener('click', gameOver);
 
 function gameOver() {
   if (playerScoreSpan.innerHTML === 5) {
     playAgainModal.style.display = 'block';
     modalHeader.innerHTML = 'You won!';
-    modalParagraph.innerHTML = `Well done you beat the computer, lets go for another round!`;
-  } else if (computerScoreSpan.innerHTML === 5) {
+    modalParagraph.innerHTML = 'Well done you beat the computer, lets go for another round!';
+  } else if (computerScoreSpan.innerHTML === 5) { 
     playAgainModal.style.display = 'block';
     modalHeader.innerHTML = 'You lost!';
-    modalParagraph.innerHTML = `Looks like the computer beat you, Well lets go again!`;
+    modalParagraph.innerHTML = 'Looks like the computer beat you, Well lets go again!';
 }
 }
