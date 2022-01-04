@@ -1,7 +1,6 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const playerScoreSpan = document.querySelector('[data-player-score]')
-const playerLivesSpan = document.querySelector('[data-player-lives]')
 const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   {
     name: 'rock',
@@ -122,23 +121,19 @@ function randomSelection() {
   return SELECTIONS[randomIndex]
 }
 
+/*
+  The restartGame function sets the default scores and reloads the page
+*/
 const restartBtn = document.querySelector('#restart-btn');
-
 if (restartBtn) {
   restartBtn.addEventListener('click', restartGame);
 
-  // Restart game
   function restartGame() {
-    playerLivesSpan.innerHTML = 5;
     playerScoreSpan.innerHTML = 0;
     computerScoreSpan.innerHTML = 0;
     location.reload();
   }
 }
-
-
-playerScoreSpan.addEventListener('event', gameOver);
-computerScoreSpan.addEventListener('listener', gameOver);
 
 const playAgainModal = document.getElementById('play-again-modal');
 const modalHeader = document.getElementsByClassName('modal-header')[0];
@@ -146,8 +141,9 @@ const modalParagraph = document.getElementById('play-again-text');
 const playAgainBtn = document.getElementById('play-again-btn');
 playAgainBtn.addEventListener('click', restartGame);
 
-
-
+/* 
+  The gameOver function checks to see if the player or computer score is equal to 5, if one of the scores are equal to 5 then the play again modal will be displayed.
+*/
 function gameOver() {
   if (playerScore === 5) {
       playAgainModal.style.display = 'block';
