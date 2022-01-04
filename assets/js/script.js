@@ -20,6 +20,9 @@ const SELECTIONS = [  // Is an array of all the selecetions the user can choose
   }
 ]
 
+let playerScore = 0;
+let computerScore = 0;
+
 // Get DOM Elements
 const modal = document.querySelector('#rules-modal');
 const modalBtn = document.querySelector('#rules-modal-btn');
@@ -65,18 +68,16 @@ selectionButtons.forEach(selectionButton => {
    "It's a draw!". 
 */
 function makeSelection(selection) {
-  const computerSelection = randomSelection()
-  const playerWinner = isWinner(selection, computerSelection)
-  const computerWinner = isWinner(computerSelection, selection)
+  const computerSelection = randomSelection();
+  const playerWinner = isWinner(selection, computerSelection);
+  const computerWinner = isWinner(computerSelection, selection);
 
   if (playerWinner) {
-    incrementScore(playerScoreSpan);
-    gameOver(playerScoreSpan)
-  } else if (computerWinner){
-    incrementScore(computerScoreSpan);
-    playerLives(playerLivesSpan);
-  } else { 
-    
+    incrementScore();
+  } else if (computerWinner) {
+    incrementScore(true);
+  } else {
+
   }
 
   let showChoice = document.getElementById('show-choice');
@@ -93,19 +94,18 @@ function makeSelection(selection) {
 }
 }
 
-/*function Play(){
-  if (playerLivesSpan.innerHTML === 0) {
-		 playAgainModal.style.display = 'block';
-  } else {
-    playAgainModal.style.display = 'none';
-  }
-}*/
-
 /* 
    The incrementScore function increases the scoreSpan innerText by 1.
 */
-function incrementScore(scoreSpan) {
-  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+function incrementScore(isComputer=false) {
+  if (isComputer) {
+    computerScore += 1;
+    computerScoreSpan.innerText = computerScore;
+  } else {
+    playerScore += 1;
+    playerScoreSpan.innerText = playerScore;
+  }
+  gameOver();
 }
 /* 
    The isWinner function checks if the selection.beats object is equal to the opponents selection.
@@ -129,35 +129,39 @@ function playerLives(livesSpan) {
 }
 
 const restartBtn = document.querySelector('#restart-btn');
-restartBtn.addEventListener('click', restartGame);
 
-// Restart game
-function restartGame() {
-  playerLivesSpan.innerHTML = 5;
-  playerScoreSpan.innerHTML = 0;
-  computerScoreSpan.innerHTML = 0;
-  location.reload();
+if (restartBtn) {
+  restartBtn.addEventListener('click', restartGame);
+
+  // Restart game
+  function restartGame() {
+    playerLivesSpan.innerHTML = 5;
+    playerScoreSpan.innerHTML = 0;
+    computerScoreSpan.innerHTML = 0;
+    location.reload();
+  }
 }
+
 
 playerScoreSpan.addEventListener('event', gameOver);
 computerScoreSpan.addEventListener('listener', gameOver);
 
-const playAgainModal = document.getElementById('#play-again-modal');
-const modalHeader = document.getElementsByClassName('#modal-header');
-const modalParagraph = document.getElementsByClassName('#modal-body');
-const playAgainBtn = document.getElementById('#play-again-btn');
-//playAgainBtn.addEventListener('click', restartGame);
+const playAgainModal = document.getElementById('play-again-modal');
+const modalHeader = document.getElementsByClassName('modal-header')[0];
+const modalParagraph = document.getElementById('play-again-text');
+const playAgainBtn = document.getElementById('play-again-btn');
+playAgainBtn.addEventListener('click', restartGame);
 
-//document.getElementsByTagName('span').addEventListener('click', gameOver);
+
 
 function gameOver() {
-  if (playerScoreSpan.innerHTML === 5) {
-    playAgainModal.style.display = 'block';
-    modalHeader.innerHTML = 'You won!';
-    modalParagraph.innerHTML = 'Well done you beat the computer, lets go for another round!';
-  } else if (computerScoreSpan.innerHTML === 5) { 
-    playAgainModal.style.display = 'block';
-    modalHeader.innerHTML = 'You lost!';
-    modalParagraph.innerHTML = 'Looks like the computer beat you, Well lets go again!';
-}
+  if (playerScore === 5) {
+      playAgainModal.style.display = 'block';
+      modalHeader.innerHTML = 'You won!';
+      modalParagraph.innerHTML = 'Well done you beat the computer, lets go for another round!';
+    } else if (computerScore === 5) { 
+      playAgainModal.style.display = 'block';
+      modalHeader.innerHTML = 'You lost!';
+      modalParagraph.innerHTML = 'Looks like the computer beat you, Well lets go again!';
+  }
 }
