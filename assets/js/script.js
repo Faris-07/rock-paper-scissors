@@ -95,7 +95,7 @@ function makeSelection(selection) {
 }
 
 /* 
-   The incrementScore function increases the scoreSpan innerText by 1.
+   The incrementScore function increases the scoreSpan innerText by 1 and also calls the game over function.
 */
 function incrementScore(isComputer=false) {
   if (isComputer) {
@@ -120,12 +120,6 @@ function isWinner(selection, opponentSelection) {
 function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
   return SELECTIONS[randomIndex]
-}
-/* 
-   The playerLives function decreases the livesSpan innerText by 1.
-*/
-function playerLives(livesSpan) {
-  livesSpan.innerText = parseInt(livesSpan.innerText) - 1
 }
 
 const restartBtn = document.querySelector('#restart-btn');
