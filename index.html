@@ -14,29 +14,26 @@
     <title>Rock|Paper|Scissors</title>
 </head>
 <body>
-    <div class="wrapper">
     <header>
-        <h1>Rock Paper Scissors </h1> 
+        <h1><i class="fas fa-hand-rock"></i><i class="fas fa-hand-paper"></i><i class="fas fa-hand-scissors"></i>Rock Paper Scissors</h1> 
     </header>
-    <div class="home-buttons">
-        <button id="play-btn" class="button" onclick="document.location='game.html'">Play</button>
-        <button id="rules-modal-btn" class="button">Rules</button>
+
+    <div id="information">
+        <p>Welcome to Rock Paper Scissors</p>
+        <p>In this game you choose between 3 options which are, you guessed it rock paper and scissors.</p>
+        <p>The rules are simple</p>
+        <ul>
+            <li>Rock beats Scissors</li>
+            <li>Scissors beats Paper</li>
+            <li>Paper beats Rock</li>
+        </ul>
+        <p>Play against the computer in order to determine who comes out on top (Man or Machine?)</p>
+        <p>The first to 7 points wins the game</p> 
+        <p>Good Luck and have fun!</p>
     </div>
 
-    <div id="rules-modal" class="modal">
-        <div class="modal-content">
-        <div class="modal-header">
-            
-            <h2>Rules:</h2>
-            <span class="close">&times;</span>
-        </div>
-        <div class="modal-body">
-            <p>Rock Smashes Scissors </p>
-            <p>Scissors Cuts Paper </p>
-            <p>Paper Covers Rock</p>
-        </div>
-        </div>
-    </div>
+    <div class="home-buttons">
+        <button id="play-btn" class="home-button" onclick="document.location='game.html'">Play</button>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

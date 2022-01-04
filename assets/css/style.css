@@ -16,13 +16,13 @@ p {
     font-size: 1.5rem;
 }
 
-/*.wrapper {
-  background-color: #2C3D55;
-  padding-top: 1%;
-  padding-bottom: 2%;
-  height: 80%;
-  width: 100%;
-}*/
+ul {
+  font-size: 1.5rem;
+}
+
+header h1 {
+  color: #C42847;
+}
 
 .player-lives {
     margin-top: 3%;
@@ -31,11 +31,6 @@ p {
     display: grid;
     justify-content: center;
     justify-items: center;
-}
-
-.score-board {
-    display: flex;
-    justify-content: center;
 }
 
 .choices {
@@ -69,6 +64,14 @@ p {
     color: #00FF00;
     font-size: 2rem;
   }
+
+#information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1% 1% 1%;
+}
 
 #show-choice {
     display: flex;
@@ -106,6 +109,22 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.home-button {
+  width: 20%;
+  background: #C42847;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  margin: 3% 5% 0 5%;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background: #FFA500;
 }
 
 .button:hover {
@@ -171,7 +190,7 @@ p {
 }
 
 #message p {
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 
 .choices p {

@@ -135,8 +135,12 @@ if (restartBtn) {
   }
 }
 
+/*
+  Assigning variables to the play again modal.
+*/
+
 const playAgainModal = document.getElementById('play-again-modal');
-const modalHeader = document.getElementsByClassName('modal-header')[0];
+const modalHeader = document.getElementById('play-again-header');
 const modalParagraph = document.getElementById('play-again-text');
 const playAgainBtn = document.getElementById('play-again-btn');
 playAgainBtn.addEventListener('click', restartGame);
@@ -145,13 +149,13 @@ playAgainBtn.addEventListener('click', restartGame);
   The gameOver function checks to see if the player or computer score is equal to 5, if one of the scores are equal to 5 then the play again modal will be displayed.
 */
 function gameOver() {
-  if (playerScore === 5) {
+  if (playerScore === 7) {
       playAgainModal.style.display = 'block';
       modalHeader.innerHTML = 'You won!';
-      modalParagraph.innerHTML = 'Well done you beat the computer, lets go for another round!';
-    } else if (computerScore === 5) { 
+      modalParagraph.innerHTML = 'Well done you beat the computer. Lets go for another round!';
+    } else if (computerScore === 7) { 
       playAgainModal.style.display = 'block';
       modalHeader.innerHTML = 'You lost!';
-      modalParagraph.innerHTML = 'Looks like the computer beat you, Well lets go again!';
+      modalParagraph.innerHTML = 'Looks like the computer beat you. Lets go again!';
   }
 }
