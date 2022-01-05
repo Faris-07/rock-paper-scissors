@@ -93,3 +93,4 @@ The live link can be found here - [Rock Paper Scissors](https://faris-07.github.
 
 ## Media 
 - The rock, paper and scissors icons are from - [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
+- The fonts are from - [Google Fonts](https://fonts.google.com/)
