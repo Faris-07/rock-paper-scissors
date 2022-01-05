@@ -14,10 +14,12 @@
     <title>Rock|Paper|Scissors</title>
 </head>
 <body>
+    <!--Header-->
     <header>
         <h1><i class="fas fa-hand-rock"></i><i class="fas fa-hand-paper"></i><i class="fas fa-hand-scissors"></i>Rock Paper Scissors</h1>  
     </header>
     
+    <!--Scoreboard Section-->
     <div class="score-board">
         <div>
             Player :
@@ -29,21 +31,27 @@
           </div>
     </div>
 
+    <!--Show player and computer choice-->
     <div id="show-choice"></div>
 
+    <!--Show message to the player to tell them if they won/lost/drawed the round-->
     <div id="message"></div>
 
+    <!--Rock, Paper and Scissor buttons for the player to choose-->
     <div class="choices">
         <button class="choice" data-selection="rock" aria-labelledby="Rock"><i class="fas fa-hand-rock"><p>Rock</p></i></button>
         <button class="choice" data-selection="paper" aria-labelledby="Paper"><i class="fas fa-hand-paper"><p>Paper</p></i></button>
         <button class="choice" data-selection="scissors" aria-labelledby="Scissors"><i class="fas fa-hand-scissors"><p>Scissors</p></i></button>
     </div>
 
+    <!--The Rules, Restart and Quit buttons-->
     <div class="buttons">
         <button id="rules-modal-btn" class="button">Rules</button>
         <button id="restart-btn" class="button">Restart</button>
         <button id="quit-btn" class="button" onclick="document.location='index.html'">Quit</button>
     </div>
+
+    <!--The rules modal-->
     <div id="rules-modal" class="modal">
         <div class="modal-content">
         <div class="modal-header">
@@ -63,6 +71,7 @@
         </div>
     </div>
     
+    <!--The Play again modal which is shown when the player wins or loses the game-->
     <div id="play-again-modal" class="modal">
         <div class="modal-content">
         <div class="modal-header">
@@ -76,5 +85,6 @@
         </div>
     </div>
 
+    <!--The Javascript-->
     <script src="assets/js/script.js"></script>
 </body>

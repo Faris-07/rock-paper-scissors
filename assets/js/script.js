@@ -1,7 +1,7 @@
-const selectionButtons = document.querySelectorAll('[data-selection]')
-const computerScoreSpan = document.querySelector('[data-computer-score]')
-const playerScoreSpan = document.querySelector('[data-player-score]')
-const SELECTIONS = [  // Is an array of all the selecetions the user can choose
+const selectionButtons = document.querySelectorAll('[data-selection]') // The buttons the player chooses
+const computerScoreSpan = document.querySelector('[data-computer-score]') // The computers score
+const playerScoreSpan = document.querySelector('[data-player-score]') // The players score
+const SELECTIONS = [  // Is an array of all the selections the user can choose
   {
     name: 'rock',
     icon: '<i class="fas fa-hand-rock"></i>',
@@ -146,7 +146,7 @@ const playAgainBtn = document.getElementById('play-again-btn');
 playAgainBtn.addEventListener('click', restartGame);
 
 /* 
-  The gameOver function checks to see if the player or computer score is equal to 5, if one of the scores are equal to 5 then the play again modal will be displayed.
+  The gameOver function checks to see if the player or computer score is equal to 7, if one of the scores are equal to 7 then the play again modal will be displayed.
 */
 function gameOver() {
   if (playerScore === 7) {
