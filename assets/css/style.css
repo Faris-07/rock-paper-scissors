@@ -268,4 +268,8 @@ header h1 {
   .buttons {
     flex-direction: column;
   }
+
+  .choice {
+    font-size: 3rem;
+  }
 }
