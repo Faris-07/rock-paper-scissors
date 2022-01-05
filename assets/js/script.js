@@ -1,6 +1,6 @@
-const selectionButtons = document.querySelectorAll('[data-selection]') // The buttons the player chooses
-const computerScoreSpan = document.querySelector('[data-computer-score]') // The computers score
-const playerScoreSpan = document.querySelector('[data-player-score]') // The players score
+const selectionButtons = document.querySelectorAll('[data-selection]'); // The buttons the player chooses
+const computerScoreSpan = document.querySelector('[data-computer-score]'); // The computers score
+const playerScoreSpan = document.querySelector('[data-player-score]'); // The players score
 const SELECTIONS = [  // Is an array of all the selections the user can choose
   {
     name: 'rock',
@@ -17,7 +17,7 @@ const SELECTIONS = [  // Is an array of all the selections the user can choose
     icon: '<i class="fas fa-hand-scissors"></i>',
     beats: 'paper'
   }
-]
+];
 
 let playerScore = 0;
 let computerScore = 0;

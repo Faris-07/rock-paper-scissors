@@ -48,13 +48,13 @@ Rock Paper Scissors is a game for people of all ages to play rock paper scissors
 
 ![Message Section](/assets/images/MessageRPS.png)
 
-## User Choices Buttons (Rock, Paper and Scissors)
+## User Games Buttons (Rock, Paper and Scissors)
 - The user chooses between 3 different choices which are rock, paper and scissors. The buttons are big and labelled to make it easier for the user to distinguish and use the buttons.
 - The buttons also change colour to show when they are pressed or clicked.
 
 ![User Game Buttons](/assets/images/UserGameButtonsRPS.png)
 
-## Game Buttons (Rules, Restart and Quit)
+## Game Settings (Rules, Restart and Quit)
 - There are three buttons for the functions of the game which are rules, restart and quit.
 - The rules button when pressed/clicked displays a pop-up box which shows the user the rules of the game.
 - The restart button when pressed/clicked resets the game.
@@ -68,4 +68,21 @@ Rock Paper Scissors is a game for people of all ages to play rock paper scissors
  - I confirm that the game results are always correct.
  - I confirm that the header, information, scoreboard, choice,  message, user buttons and game button sections are all readable, have high contrast and are easy to understand.
  - I confirm that this project is responsive, accessible and functions on all standard screen sizes using the devtools device toolbar.
-![](/assets/images/aboutus.png)
+
+# Validator Testing
+- HTML
+    - No errors were returned when passing through the official W3C validator.
+- CSS
+    - No errors were returned when passing through the official (Jigsaw) validator.
+- Javascript
+    - No errors were returned when passing through the official JSHint validator.
+
+![Light House Score](/assets/images/Lighthouse-score.png)
+
+# Unfixed Bugs
+
+# Deployment
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository, navigate to the Settings tab
+    - From the source section drop-down menu, select the main Branch
+    - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
