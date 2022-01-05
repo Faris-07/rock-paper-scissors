@@ -4,7 +4,9 @@ Rock Paper Scissors is a game for people of all ages to play rock paper scissors
 
  This site is targeted towards adults and children as a simple app to learn, practice and have fun.
 
-![Responsive](/assets/images/)
+![Responsive Home Page](/assets/images/ResponsiveHomePg.png)
+
+![Responsive Game Page](/assets/images/ResponsiveGamePg.png)
 
  # Features - Homepage
 
