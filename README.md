@@ -86,3 +86,10 @@ Rock Paper Scissors is a game for people of all ages to play rock paper scissors
     - In the GitHub repository, navigate to the Settings tab
     - From the source section drop-down menu, select the main Branch
     - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - [Rock Paper Scissors](https://faris-07.github.io/rock-paper-scissors/)
+
+# Credits
+
+## Media 
+- The rock, paper and scissors icons are from - [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
