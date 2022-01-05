@@ -8,6 +8,7 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
 }
 
@@ -28,6 +29,7 @@ header h1 {
 .choices {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
 }
 
@@ -62,11 +64,14 @@ header h1 {
 /* The Information section */
 
 #information {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1% 1% 1%;
+  padding: 1%;
 }
 
 /* The users choice section */
@@ -74,6 +79,7 @@ header h1 {
 #show-choice {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 2%;
 }
 
@@ -82,6 +88,7 @@ header h1 {
 #message {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 2%;
     color: #FFA500;
 }
@@ -115,6 +122,8 @@ header h1 {
 
 .home-button {
   width: 20%;
+  margin-right: auto;
+  margin-left: auto;
   background: #C42847;
   font-size: 1.5rem;
   padding: 1em 2em;
@@ -214,4 +223,49 @@ header h1 {
       color: red;
       font-size: 2rem;
   }
+
+/* Media Querys */  
+
+/* Media query at 720 px */ 
   
+@media screen and (max-width: 720px) {
+    .home-button {
+      width: max-content;
+    }
+  }
+
+/* Media query at 685 px */ 
+
+@media screen and (max-width: 685px) {
+  #information {
+    width: 80%;
+  }
+}
+
+/* Media query at 500 px */ 
+
+@media screen and (max-width: 500px) {
+  #information {
+    width: 90%;
+  }
+
+  #show-choice {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #message {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Media query at 400 px */ 
+
+@media screen and (max-width: 400px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
