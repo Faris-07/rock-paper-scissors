@@ -23,6 +23,14 @@ header h1 {
   color: #FFA500;
 }
 
+/* Font awesome Icons */
+
+.fa, .fas {
+  font-weight: 900;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* The player choices buttons */
 
 .choices {
@@ -180,7 +188,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5%;
+    padding: 3%;
     background-color: #2C3D55;
     color: #fff;
   }
@@ -196,6 +204,11 @@ header h1 {
     text-decoration: none;
     cursor: pointer;
   }
+
+#header-spacing {
+  flex-grow: 0.99;
+  text-align: center;
+}
 
 #play-again-btn {
   margin-bottom: 1em;
