@@ -93,6 +93,9 @@ The live link can be found here - [Rock Paper Scissors](https://faris-07.github.
 
 # Credits
 
+## Content
+- The SELECTION variable "beats" idea was taken from - [This Article](https://stackoverflow.com/questions/53730900/more-efficient-choice-comparison-for-rock-paper-scissors)
+
 ## Media 
 - The rock, paper and scissors icons are from - [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
 - The fonts are from - [Google Fonts](https://fonts.google.com/)
